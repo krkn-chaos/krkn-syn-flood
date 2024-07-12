@@ -1,3 +1,4 @@
+![action](https://github.com/krkn-chaos/krkn-syn-flood/actions/workflows/build.yaml/badge.svg)
 # SYN Flood Scenario attacker container
 This is the container used by the syn flood scenario in krkn that creates the syn traffic against the target service. Krkn manages to deploy the number of pods specified by the user respecting, when available, the node affinity specified.
 This container expects the following environment variables:
