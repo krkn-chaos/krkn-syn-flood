@@ -16,8 +16,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Build Docker image
         run: |
-          docker build --no-cache -t quay.io/krkn-chaos/krkn-service-hijacking:latest .
-          docker tag quay.io/krkn-chaos/krkn-service-hijacking:latest quay.io/krkn-chaos/krkn-service-hijacking:${GITHUB_REF##*/}
+          docker build -f Containerfile --no-cache -t quay.io/krkn-chaos/krkn-syn-flood:latest .
+          docker tag quay.io/krkn-chaos/krkn-syn-flood:latest quay.io/krkn-chaos/krkn-syn-flood:${GITHUB_REF##*/}
       - name: Login in quay
         run: docker login quay.io -u ${QUAY_USER} -p ${QUAY_TOKEN}
         env:
